@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgres@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+    <root id="1">
+      <ServerVersion>11.1</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>13012</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>567</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>569</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Relations>sequence|table|16698|16700|1
+sequence|table|16708|16710|1
+sequence|table|16716|16718|1
+sequence|table|16726|16728|1
+sequence|table|16734|16736|1
+sequence|table|16794|16796|1
+sequence|table|16669|16671|1
+sequence|table|16680|16682|1
+sequence|table|16690|16692|1
+</Relations>
+    </database>
+    <database id="3" parent="1" name="regions">
+      <ObjectId>16927</ObjectId>
+      <StateNumber>1532</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>519</IntrospectionStateNumber>
+      <Visible>1</Visible>
+      <Relations>sequence|table|17298|17268|1
+sequence|table|17329|17324|1
+sequence|table|17369|17360|1
+</Relations>
+    </database>
+    <role id="4" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="5" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="6" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="13" parent="3" name="information_schema">
+      <ObjectId>12716</ObjectId>
+      <StateNumber>366</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="14" parent="3" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>359</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="15" parent="3" name="pg_temp_1">
+      <ObjectId>11804</ObjectId>
+      <StateNumber>121</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="16" parent="3" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="17" parent="3" name="pg_toast_temp_1">
+      <ObjectId>11805</ObjectId>
+      <StateNumber>121</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="18" parent="3" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>360</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2019-05-18.23:39:15.831</IntrospectionTimestamp>
+      <IntrospectionStateNumber>62751</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="19" parent="3" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="20" parent="3" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="21" parent="3" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="22" parent="3" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="23" parent="3" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="24" parent="3" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="25" parent="3" name="plpgsql">
+      <ObjectId>12998</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>519</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="26" parent="18" name="2018_id_seq">
+      <ObjectId>16968</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2371</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="27" parent="18" name="criterias_id_seq">
+      <ObjectId>17329</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>62694</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="28" parent="18" name="statistic_id_seq">
+      <ObjectId>17369</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>62717</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="29" parent="18" name="subject_id_seq">
+      <ObjectId>17298</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>62667</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="30" parent="18" name="alembic_version">
+      <ObjectId>17342</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>62700</StateNumber>
+    </table>
+    <table id="31" parent="18" name="criterions">
+      <ObjectId>17324</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>62732</StateNumber>
+    </table>
+    <table id="32" parent="18" name="locations">
+      <ObjectId>17249</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>62751</StateNumber>
+    </table>
+    <table id="33" parent="18" name="statistic">
+      <ObjectId>17360</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>62732</StateNumber>
+    </table>
+    <table id="34" parent="18" name="subject">
+      <ObjectId>17268</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>62690</StateNumber>
+    </table>
+    <column id="35" parent="30" name="version_num">
+      <Position>1</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>62700</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="36" parent="30" name="alembic_version_pkc">
+      <ObjectId>17345</ObjectId>
+      <StateNumber>62700</StateNumber>
+      <ColNames>version_num</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="37" parent="30" name="alembic_version_pkc">
+      <ObjectId>17346</ObjectId>
+      <StateNumber>62700</StateNumber>
+      <ColNames>version_num</ColNames>
+      <UnderlyingIndexName>alembic_version_pkc</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>62727</StateNumber>
+      <DefaultExpression>nextval(&apos;criterias_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="39" parent="31" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>62697</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="40" parent="31" name="criterias_pk">
+      <ObjectId>17382</ObjectId>
+      <StateNumber>62727</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="41" parent="31" name="criterias_pk">
+      <ObjectId>17383</ObjectId>
+      <StateNumber>62727</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>criterias_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="42" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>53436</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="43" parent="32" name="location">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>53436</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="44" parent="32" name="value">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>62751</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="45" parent="32" name="subkod1">
+      <Position>4</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>62674</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="46" parent="32" name="date">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>62675</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="47" parent="32" name="oktmo">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>62654</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="48" parent="32" name="regions_id">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>62645</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="49" parent="32" name="subject">
+      <Position>10</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>62748</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="50" parent="32" name="population_pk">
+      <ObjectId>17255</ObjectId>
+      <StateNumber>62751</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="51" parent="32" name="locations_oktmo_key">
+      <ObjectId>17417</ObjectId>
+      <StateNumber>62751</StateNumber>
+      <ColNames>oktmo</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="52" parent="32" name="population_pk">
+      <ObjectId>17256</ObjectId>
+      <StateNumber>53436</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>population_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="53" parent="32" name="locations_oktmo_key">
+      <ObjectId>17418</ObjectId>
+      <StateNumber>62746</StateNumber>
+      <ColNames>oktmo</ColNames>
+      <UnderlyingIndexName>locations_oktmo_key</UnderlyingIndexName>
+    </key>
+    <column id="54" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>62718</StateNumber>
+      <DefaultExpression>nextval(&apos;statistic_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="55" parent="33" name="value">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>62712</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="56" parent="33" name="date">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>62712</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="57" parent="33" name="criterions_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>62731</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="58" parent="33" name="locations_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>62724</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="59" parent="33" name="locations">
+      <Position>6</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>62712</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="60" parent="33" name="statistic_id_key">
+      <ObjectId>17419</ObjectId>
+      <StateNumber>62746</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="61" parent="33" name="statistic_pk">
+      <ObjectId>17367</ObjectId>
+      <StateNumber>62731</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="33" name="statistic_pk">
+      <ObjectId>17368</ObjectId>
+      <StateNumber>62714</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>statistic_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="63" parent="33" name="statistic_id_key">
+      <ObjectId>17420</ObjectId>
+      <StateNumber>62746</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>statistic_id_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="64" parent="33" name="statistic_criterions_id_fk">
+      <ObjectId>17392</ObjectId>
+      <StateNumber>62732</StateNumber>
+      <ColNames>criterions_id</ColNames>
+      <RefTableId>17324</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>criterions</RefTableName>
+      <RefKeyName>criterias_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="65" parent="33" name="statistic_locations_id_fk">
+      <ObjectId>17397</ObjectId>
+      <StateNumber>62734</StateNumber>
+      <ColNames>locations_id</ColNames>
+      <RefTableId>17249</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>locations</RefTableName>
+      <RefKeyName>population_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="66" parent="34" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>62668</StateNumber>
+      <DefaultExpression>nextval(&apos;subject_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="67" parent="34" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>62662</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="68" parent="34" name="kod">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>62663</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="69" parent="34" name="subject_pk">
+      <ObjectId>17271</ObjectId>
+      <StateNumber>62690</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="70" parent="34" name="subject_kod_key">
+      <ObjectId>17421</ObjectId>
+      <StateNumber>62746</StateNumber>
+      <ColNames>kod</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="71" parent="34" name="subject_pk">
+      <ObjectId>17272</ObjectId>
+      <StateNumber>62660</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>subject_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="72" parent="34" name="subject_kod_key">
+      <ObjectId>17422</ObjectId>
+      <StateNumber>62746</StateNumber>
+      <ColNames>kod</ColNames>
+      <UnderlyingIndexName>subject_kod_key</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
