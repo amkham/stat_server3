@@ -11,13 +11,13 @@
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>569</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|16698|16700|1
-sequence|table|16708|16710|1
-sequence|table|16716|16718|1
+      <Relations>sequence|table|16716|16718|1
 sequence|table|16726|16728|1
 sequence|table|16734|16736|1
 sequence|table|16794|16796|1
 sequence|table|16669|16671|1
+sequence|table|16698|16700|1
+sequence|table|16708|16710|1
 sequence|table|16680|16682|1
 sequence|table|16690|16692|1
 </Relations>
@@ -29,8 +29,9 @@ sequence|table|16690|16692|1
       <IntrospectionStateNumber>519</IntrospectionStateNumber>
       <Visible>1</Visible>
       <Relations>sequence|table|17298|17268|1
+sequence|table|17553|17555|1
 sequence|table|17329|17324|1
-sequence|table|17369|17360|1
+sequence|table|17464|17466|1
 </Relations>
     </database>
     <role id="4" parent="1" name="pg_execute_server_program">
@@ -116,8 +117,8 @@ sequence|table|17369|17360|1
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2019-05-18.23:39:15.831</IntrospectionTimestamp>
-      <IntrospectionStateNumber>62751</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2019-05-24.11:02:57.462</IntrospectionTimestamp>
+      <IntrospectionStateNumber>62891</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -185,7 +186,15 @@ sequence|table|17369|17360|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="27" parent="18" name="criterias_id_seq">
+    <sequence id="27" parent="18" name="categories_id_seq">
+      <ObjectId>17553</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>62875</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="28" parent="18" name="criterias_id_seq">
       <ObjectId>17329</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>62694</StateNumber>
@@ -193,15 +202,15 @@ sequence|table|17369|17360|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="28" parent="18" name="statistic_id_seq">
-      <ObjectId>17369</ObjectId>
+    <sequence id="29" parent="18" name="statistic_id_seq">
+      <ObjectId>17464</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>62717</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
+      <StateNumber>62810</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
+      <DataType>integer</DataType>
     </sequence>
-    <sequence id="29" parent="18" name="subject_id_seq">
+    <sequence id="30" parent="18" name="subject_id_seq">
       <ObjectId>17298</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>62667</StateNumber>
@@ -209,52 +218,90 @@ sequence|table|17369|17360|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <table id="30" parent="18" name="alembic_version">
+    <table id="31" parent="18" name="alembic_version">
       <ObjectId>17342</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>62700</StateNumber>
     </table>
-    <table id="31" parent="18" name="criterions">
+    <table id="32" parent="18" name="categories">
+      <ObjectId>17555</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>62879</StateNumber>
+    </table>
+    <table id="33" parent="18" name="criterions">
       <ObjectId>17324</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>62732</StateNumber>
+      <StateNumber>62873</StateNumber>
     </table>
-    <table id="32" parent="18" name="locations">
+    <table id="34" parent="18" name="locations">
       <ObjectId>17249</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>62751</StateNumber>
+      <StateNumber>62887</StateNumber>
     </table>
-    <table id="33" parent="18" name="statistic">
-      <ObjectId>17360</ObjectId>
+    <table id="35" parent="18" name="statistic">
+      <ObjectId>17466</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>62732</StateNumber>
+      <StateNumber>62869</StateNumber>
     </table>
-    <table id="34" parent="18" name="subject">
+    <table id="36" parent="18" name="subject">
       <ObjectId>17268</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>62690</StateNumber>
+      <StateNumber>62888</StateNumber>
     </table>
-    <column id="35" parent="30" name="version_num">
+    <column id="37" parent="31" name="version_num">
       <Position>1</Position>
       <DataType>varchar(32)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>62700</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="36" parent="30" name="alembic_version_pkc">
+    <index id="38" parent="31" name="alembic_version_pkc">
       <ObjectId>17345</ObjectId>
       <StateNumber>62700</StateNumber>
       <ColNames>version_num</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="37" parent="30" name="alembic_version_pkc">
+    <key id="39" parent="31" name="alembic_version_pkc">
       <ObjectId>17346</ObjectId>
       <StateNumber>62700</StateNumber>
       <ColNames>version_num</ColNames>
       <UnderlyingIndexName>alembic_version_pkc</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="38" parent="31" name="id">
+    <column id="40" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>62875</StateNumber>
+      <DefaultExpression>nextval(&apos;categories_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="41" parent="32" name="value">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>62875</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="42" parent="32" name="categories_id_uindex">
+      <ObjectId>17559</ObjectId>
+      <StateNumber>62876</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="43" parent="32" name="categories_pk">
+      <ObjectId>17560</ObjectId>
+      <StateNumber>62877</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="44" parent="32" name="categories_pk">
+      <ObjectId>17561</ObjectId>
+      <StateNumber>62877</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>categories_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="45" parent="33" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -262,165 +309,183 @@ sequence|table|17369|17360|1
       <DefaultExpression>nextval(&apos;criterias_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="39" parent="31" name="name">
+    <column id="46" parent="33" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>62697</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="40" parent="31" name="criterias_pk">
+    <column id="47" parent="33" name="categories_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>62878</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="48" parent="33" name="criterias_pk">
       <ObjectId>17382</ObjectId>
       <StateNumber>62727</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="41" parent="31" name="criterias_pk">
+    <key id="49" parent="33" name="criterias_pk">
       <ObjectId>17383</ObjectId>
       <StateNumber>62727</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>criterias_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="42" parent="32" name="id">
+    <foreign-key id="50" parent="33" name="criterions_categories_id_fk">
+      <ObjectId>17562</ObjectId>
+      <StateNumber>62879</StateNumber>
+      <ColNames>categories_id</ColNames>
+      <RefTableId>17555</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>categories</RefTableName>
+      <RefKeyName>categories_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="51" parent="34" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>53436</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="43" parent="32" name="location">
+    <column id="52" parent="34" name="location">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <StateNumber>53436</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="44" parent="32" name="value">
-      <Position>3</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>62751</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="45" parent="32" name="subkod1">
+    <column id="53" parent="34" name="subkod1">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>62674</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="46" parent="32" name="date">
-      <Position>5</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>62675</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="47" parent="32" name="oktmo">
+    <column id="54" parent="34" name="oktmo">
       <Position>6</Position>
       <DataType>text|0s</DataType>
       <StateNumber>62654</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="48" parent="32" name="regions_id">
-      <Position>7</Position>
-      <DataType>integer|0s</DataType>
-      <StateNumber>62645</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="49" parent="32" name="subject">
+    <column id="55" parent="34" name="subject">
       <Position>10</Position>
       <DataType>text|0s</DataType>
       <StateNumber>62748</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="50" parent="32" name="population_pk">
+    <column id="56" parent="34" name="subject_id">
+      <Position>11</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>62887</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="57" parent="34" name="population_pk">
       <ObjectId>17255</ObjectId>
-      <StateNumber>62751</StateNumber>
+      <StateNumber>62887</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="51" parent="32" name="locations_oktmo_key">
+    <index id="58" parent="34" name="locations_oktmo_key">
       <ObjectId>17417</ObjectId>
-      <StateNumber>62751</StateNumber>
+      <StateNumber>62887</StateNumber>
       <ColNames>oktmo</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="52" parent="32" name="population_pk">
+    <key id="59" parent="34" name="population_pk">
       <ObjectId>17256</ObjectId>
       <StateNumber>53436</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>population_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="53" parent="32" name="locations_oktmo_key">
+    <key id="60" parent="34" name="locations_oktmo_key">
       <ObjectId>17418</ObjectId>
       <StateNumber>62746</StateNumber>
       <ColNames>oktmo</ColNames>
       <UnderlyingIndexName>locations_oktmo_key</UnderlyingIndexName>
     </key>
-    <column id="54" parent="33" name="id">
+    <foreign-key id="61" parent="34" name="locations_subject_id_fk">
+      <ObjectId>17582</ObjectId>
+      <StateNumber>62888</StateNumber>
+      <ColNames>subject_id</ColNames>
+      <RefTableId>17268</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>subject</RefTableName>
+      <RefKeyName>subject_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="62" parent="35" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>62718</StateNumber>
+      <StateNumber>62810</StateNumber>
       <DefaultExpression>nextval(&apos;statistic_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="55" parent="33" name="value">
+    <column id="63" parent="35" name="value">
       <Position>2</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>62712</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>62868</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="56" parent="33" name="date">
+    <column id="64" parent="35" name="date">
       <Position>3</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>62712</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>62869</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="57" parent="33" name="criterions_id">
+    <column id="65" parent="35" name="criterions_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>62731</StateNumber>
+      <StateNumber>62810</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="58" parent="33" name="locations_id">
+    <column id="66" parent="35" name="locations_id">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>62724</StateNumber>
+      <StateNumber>62810</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="59" parent="33" name="locations">
+    <column id="67" parent="35" name="locations">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>62712</StateNumber>
+      <StateNumber>62826</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="60" parent="33" name="statistic_id_key">
-      <ObjectId>17419</ObjectId>
-      <StateNumber>62746</StateNumber>
+    <index id="68" parent="35" name="statistic_id_key">
+      <ObjectId>17526</ObjectId>
+      <StateNumber>62869</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="61" parent="33" name="statistic_pk">
-      <ObjectId>17367</ObjectId>
-      <StateNumber>62731</StateNumber>
+    <index id="69" parent="35" name="statistic_pk">
+      <ObjectId>17479</ObjectId>
+      <StateNumber>62869</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="62" parent="33" name="statistic_pk">
-      <ObjectId>17368</ObjectId>
-      <StateNumber>62714</StateNumber>
+    <key id="70" parent="35" name="statistic_pk">
+      <ObjectId>17480</ObjectId>
+      <StateNumber>62812</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>statistic_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="63" parent="33" name="statistic_id_key">
-      <ObjectId>17420</ObjectId>
-      <StateNumber>62746</StateNumber>
+    <key id="71" parent="35" name="statistic_id_key">
+      <ObjectId>17527</ObjectId>
+      <StateNumber>62865</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>statistic_id_key</UnderlyingIndexName>
     </key>
-    <foreign-key id="64" parent="33" name="statistic_criterions_id_fk">
-      <ObjectId>17392</ObjectId>
-      <StateNumber>62732</StateNumber>
+    <foreign-key id="72" parent="35" name="statistic_criterions_id_fk">
+      <ObjectId>17473</ObjectId>
+      <StateNumber>62810</StateNumber>
       <ColNames>criterions_id</ColNames>
       <RefTableId>17324</RefTableId>
       <RefColPositions>1</RefColPositions>
@@ -430,9 +495,9 @@ sequence|table|17369|17360|1
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <foreign-key id="65" parent="33" name="statistic_locations_id_fk">
-      <ObjectId>17397</ObjectId>
-      <StateNumber>62734</StateNumber>
+    <foreign-key id="73" parent="35" name="statistic_locations_id_fk">
+      <ObjectId>17481</ObjectId>
+      <StateNumber>62813</StateNumber>
       <ColNames>locations_id</ColNames>
       <RefTableId>17249</RefTableId>
       <RefColPositions>1</RefColPositions>
@@ -442,7 +507,7 @@ sequence|table|17369|17360|1
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="66" parent="34" name="id">
+    <column id="74" parent="36" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -450,38 +515,38 @@ sequence|table|17369|17360|1
       <DefaultExpression>nextval(&apos;subject_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="67" parent="34" name="name">
+    <column id="75" parent="36" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>62662</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="68" parent="34" name="kod">
+    <column id="76" parent="36" name="kod">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>62663</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="69" parent="34" name="subject_pk">
+    <index id="77" parent="36" name="subject_pk">
       <ObjectId>17271</ObjectId>
       <StateNumber>62690</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="70" parent="34" name="subject_kod_key">
+    <index id="78" parent="36" name="subject_kod_key">
       <ObjectId>17421</ObjectId>
       <StateNumber>62746</StateNumber>
       <ColNames>kod</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="71" parent="34" name="subject_pk">
+    <key id="79" parent="36" name="subject_pk">
       <ObjectId>17272</ObjectId>
       <StateNumber>62660</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>subject_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="72" parent="34" name="subject_kod_key">
+    <key id="80" parent="36" name="subject_kod_key">
       <ObjectId>17422</ObjectId>
       <StateNumber>62746</StateNumber>
       <ColNames>kod</ColNames>

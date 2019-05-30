@@ -14,11 +14,9 @@ class Location(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     location = db.Column(db.Text)
-    value = db.Column(db.String)
     subkod1 = db.Column(db.String)
-    date = db.Column(db.String)
     oktmo = db.Column(db.Text, unique=True)
-    regions_id = db.Column(db.Integer)
+    subject_id = db.Column(db.Integer)
     subject = db.Column(db.Text)
 
 

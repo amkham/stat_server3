@@ -37,13 +37,12 @@ def location():
     json_get = request.get_json(force=True)
     json_post3 = []
     for sub in json_get:
-        location = Location.query.filter_by(regions_id=sub)
+        location = Location.query.filter_by(subject_id=sub)
         for l in location:
             json_post3.append({
                 'id': l.id,
                 'location': l.location,
-                'date': l.date,
-                'value': l.value
+
             })
     print('Населенные пункты: ', json_post3)
     return jsonify(json_post3)
